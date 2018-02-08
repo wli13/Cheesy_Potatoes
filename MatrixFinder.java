@@ -63,7 +63,8 @@ public class MatrixFinder {
 	    int[][] bigtest = new int[arrs*1000][arrs*1000];
 	    populate(bigtest);
 	    int trial = 1;
-	    int ave = 0;       
+		int ave = 0;       
+		
 	    System.out.println("\n------------------For a " + arrs + "000x" + arrs + "000 array-----------------------");  //deleted for CSV
 	    //testing out runtime
 	    System.out.println("\nRuntime for worst case:  (only shown the first 10 trials) \n");

@@ -10,7 +10,7 @@ Our matrix search algorithm should be able to find the target element in O(n) ru
 
 **Background**
 
-We know that O(1) is constant run time, which means that no matter the size of our input, the time it takes our code to search for the target should remain approximately the same. We also know that O(n) scales linearly with the amount of output. Theoretically, twice amoung of data will roughly takes about twice amount of time to execute. 
+We know that O(1) is constant run time, which means that no matter the size of our input, the time it takes our code to search for the target should remain approximately the same. We also know that O(n) scales linearly with the amount of output. Theoretically, twice the amount of data will roughly take about twice the time to execute. 
 
 For a given search execution, what factors could influence how long it takes? Memory, programs running at the background
 
