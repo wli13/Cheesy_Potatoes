@@ -1,7 +1,7 @@
 //Team Cheesy Potatoes -- Alexia Leong, Bing Li, Wenting Li
 //APCS2 pd01
-//HW03 -- I Am Still Searching
-//2018-02-02
+//L#00 -- But What Does the Data Say?
+//2018-02-07
 
 /*
  *Consider an n x n 2D array of ints, wherein numbers increase across any row (L->R) and down any column...
@@ -45,72 +45,57 @@ public class MatrixFinder {
 	return "(-1,-1)";  //if not found, return (-1,-1])
     }
 
+    public static void populate(int[][] arr){ //populates array
+	int ctr = 1;
+	for (int x = 0; x < arr.length;x++){
+	    for (int y = 0;y < arr.length;y++){
+		arr[x][y] = ctr;
+		ctr += 1;
+	    }
+	}
+    }
+    
     public static void main(String[] args){
-	int[][] x = {{1,3,5},{2,6,9},{7,10,13}};
-	int[][] y = {{1}};
-	int trial = 1;
-	int ave = 0;
+	int arrs = 2;
 	
-        String s = "Displaying matrix x:\n";
-        for (int r = 0; r < x.length; r++) {
-            s += "|  ";
-            for (int c = 0; c < x.length; c++) {
-                s += x[r][c] + "  ";
-            }
-            s += "|\n";
-        }
-        System.out.println(s);
+	//testing arrs starting at 2000x2000 and then increasing the length by 2000
+	while(arrs <= 10){
+	    int[][] bigtest = new int[arrs*1000][arrs*1000];
+	    populate(bigtest);
+	    int trial = 1;
+	    int ave = 0;       
+	    System.out.println("\n------------------For a " + arrs + "000x" + arrs + "000 array-----------------------");
+	    //testing out runtime
+	    System.out.println("\nRuntime for worst case:  (only shown the first 10 trials) \n");
+	    while(trial <= 100){
+		long startTime = System.nanoTime();
+		search(bigtest, bigtest[bigtest.length-1][0]); //code being tested 
+		long estimatedTime = System.nanoTime() - startTime;
+		if(trial <= 10){
+		    System.out.println("Run time for trial " + trial + " is " + estimatedTime +" nanoseconds.");
+		}
+		trial++;
+		ave += estimatedTime;
+	    }
+	    System.out.println("\n\tThe average time to look for the worst case is: "+ (ave/100) + " nanoseconds.");
 
-	System.out.println("Position of 6 in x:  " + search(x,6)); //(1,1)
-	System.out.println("Position of 5 in x:  " + search(x,5)); //(0,2)
-	System.out.println("Position of 7 in x:  " + search(x,7)); //(2,0)
-	System.out.println("Position of 14 (not in matrix):  " + search(x,14)); //(-1,-1)
-
-	System.out.println("\nPosition of 1 in y:  " + search(y,1)); //(0,0)
-	System.out.println("Position of 0 (not in matrix):  " + search(y,0)); //(-1,-1)
-
-	//testing out runtime
-	System.out.println("\n\nPosition of 6 in x:");
-	while(trial <= 10){
-	    long startTime = System.nanoTime();
-	    search(x,6); //code being tested 
-	    long estimatedTime = System.nanoTime() - startTime;
-	    System.out.println("Run time for trial " + trial + " is " + estimatedTime +" nanoseconds.");
-	    trial++;
-	    ave += estimatedTime;
-	}
-	System.out.println("The average time to look for 6 in x is: "+ (ave/10) + " nanoseconds.");
-
-	trial = 1;
-	ave = 0;
-	System.out.println("\n\nNew Target:\nPosition of 7 in x:");
-	while(trial <= 10){
-	    long startTime = System.nanoTime();
-	    search(x,7); //code being tested 
-	    long estimatedTime = System.nanoTime() - startTime;
-	    System.out.println("Run time for trial " + trial + " is " + estimatedTime +" nanoseconds.");
-	    trial++;
-	    ave += estimatedTime;
-	}
-	System.out.println("The average time to look for 7 (the worst case so it should take the longest) in x is: "+ (ave/10) + " nanoseconds.");
-
-	trial = 1;
-	ave = 0;
-	System.out.println("\n\nNew Target:\nPosition of 5 in x:");
-	while(trial <= 10){
-	    long startTime = System.nanoTime();
-	    search(x,5); //code being tested 
-	    long estimatedTime = System.nanoTime() - startTime;
-	    System.out.println("Run time for trial " + trial + " is " + estimatedTime +" nanoseconds.");
-	    trial++;
-	    ave += estimatedTime;
-	}
-	System.out.println("The average time to look for 5 (the best case so it should take the shortest) in x is: "+ (ave/10) + " nanoseconds.");
-			     
-	
-    }//end of main
-
-	    
+	    trial = 1;
+	    ave = 0;
+	    System.out.println("\nRuntime for best case:  (only shown the first 10 trials) \n");
+	    while(trial <= 100){
+		long startTime = System.nanoTime();
+		search(bigtest, bigtest[0][bigtest.length-1]); //code being tested 
+		long estimatedTime = System.nanoTime() - startTime;
+		if(trial <= 10){
+		    System.out.println("Run time for trial " + trial + " is " + estimatedTime +" nanoseconds.");
+		}
+		trial++;
+		ave += estimatedTime;
+	    }
+	    System.out.println("\n\tThe average time to look for the best case is: "+ (ave/100) + " nanoseconds.");
+	    arrs += 2;
+	}	    				     	
+    }//end of main	    
 }
 
 
