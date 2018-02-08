@@ -64,20 +64,20 @@ public class MatrixFinder {
 	    populate(bigtest);
 	    int trial = 1;
 	    int ave = 0;       
-	    System.out.println("\n------------------For a " + arrs + "000x" + arrs + "000 array-----------------------");
+	    System.out.println("\n------------------For a " + arrs + "000x" + arrs + "000 array-----------------------");  //deleted for CSV
 	    //testing out runtime
 	    System.out.println("\nRuntime for worst case:  (only shown the first 10 trials) \n");
 	    while(trial <= 100){
 		long startTime = System.nanoTime();
 		search(bigtest, bigtest[bigtest.length-1][0]); //code being tested 
 		long estimatedTime = System.nanoTime() - startTime;
-		if(trial <= 10){
-		    System.out.println("Run time for trial " + trial + " is " + estimatedTime +" nanoseconds.");
+		if(trial <= 15){
+		    System.out.println("trial " + trial + "," + estimatedTime + " nanoseconds.");
 		}
 		trial++;
 		ave += estimatedTime;
 	    }
-	    System.out.println("\n\tThe average time to look for the worst case is: "+ (ave/100) + " nanoseconds.");
+	    System.out.println("Average,"+ (ave/100) + " nanoseconds.");
 
 	    trial = 1;
 	    ave = 0;
@@ -87,12 +87,12 @@ public class MatrixFinder {
 		search(bigtest, bigtest[0][bigtest.length-1]); //code being tested 
 		long estimatedTime = System.nanoTime() - startTime;
 		if(trial <= 10){
-		    System.out.println("Run time for trial " + trial + " is " + estimatedTime +" nanoseconds.");
+		    System.out.println("trial " + trial + "," + estimatedTime +" nanoseconds.");
 		}
 		trial++;
 		ave += estimatedTime;
 	    }
-	    System.out.println("\n\tThe average time to look for the best case is: "+ (ave/100) + " nanoseconds.");
+	    System.out.println("Average,"+ (ave/100) + " nanoseconds.");
 	    arrs += 2;
 	}	    				     	
     }//end of main	    

@@ -1,0 +1,175 @@
+
+------------------For a 2000x2000 array-----------------------
+
+Runtime for worst case:  (only shown the first 10 trials) 
+
+trial 1,590222 nanoseconds.
+trial 2,494617 nanoseconds.
+trial 3,486716 nanoseconds.
+trial 4,432988 nanoseconds.
+trial 5,407308 nanoseconds.
+trial 6,562568 nanoseconds.
+trial 7,453531 nanoseconds.
+trial 8,525827 nanoseconds.
+trial 9,449185 nanoseconds.
+trial 10,406914 nanoseconds.
+trial 11,520296 nanoseconds.
+trial 12,422321 nanoseconds.
+trial 13,417975 nanoseconds.
+trial 14,445234 nanoseconds.
+trial 15,406519 nanoseconds.
+Average,204084 nanoseconds.
+
+Runtime for best case:  (only shown the first 10 trials) 
+
+trial 1,7901 nanoseconds.
+trial 2,6716 nanoseconds.
+trial 3,6321 nanoseconds.
+trial 4,5531 nanoseconds.
+trial 5,7507 nanoseconds.
+trial 6,15407 nanoseconds.
+trial 7,6321 nanoseconds.
+trial 8,5927 nanoseconds.
+trial 9,9086 nanoseconds.
+trial 10,9086 nanoseconds.
+Average,5515 nanoseconds.
+
+------------------For a 4000x4000 array-----------------------
+
+Runtime for worst case:  (only shown the first 10 trials) 
+
+trial 1,543605 nanoseconds.
+trial 2,635655 nanoseconds.
+trial 3,546370 nanoseconds.
+trial 4,499753 nanoseconds.
+trial 5,566518 nanoseconds.
+trial 6,469728 nanoseconds.
+trial 7,319210 nanoseconds.
+trial 8,408099 nanoseconds.
+trial 9,348444 nanoseconds.
+trial 10,295112 nanoseconds.
+trial 11,265482 nanoseconds.
+trial 12,264296 nanoseconds.
+trial 13,246914 nanoseconds.
+trial 14,189629 nanoseconds.
+trial 15,285234 nanoseconds.
+Average,251543 nanoseconds.
+
+Runtime for best case:  (only shown the first 10 trials) 
+
+trial 1,1580 nanoseconds.
+trial 2,1185 nanoseconds.
+trial 3,790 nanoseconds.
+trial 4,1185 nanoseconds.
+trial 5,790 nanoseconds.
+trial 6,790 nanoseconds.
+trial 7,1580 nanoseconds.
+trial 8,1581 nanoseconds.
+trial 9,1580 nanoseconds.
+trial 10,1580 nanoseconds.
+Average,545 nanoseconds.
+
+------------------For a 6000x6000 array-----------------------
+
+Runtime for worst case:  (only shown the first 10 trials) 
+
+trial 1,229531 nanoseconds.
+trial 2,271407 nanoseconds.
+trial 3,264296 nanoseconds.
+trial 4,238617 nanoseconds.
+trial 5,210173 nanoseconds.
+trial 6,208593 nanoseconds.
+trial 7,222420 nanoseconds.
+trial 8,207408 nanoseconds.
+trial 9,203457 nanoseconds.
+trial 10,200296 nanoseconds.
+trial 11,203061 nanoseconds.
+trial 12,195160 nanoseconds.
+trial 13,195950 nanoseconds.
+trial 14,199506 nanoseconds.
+trial 15,211357 nanoseconds.
+Average,177169 nanoseconds.
+
+Runtime for best case:  (only shown the first 10 trials) 
+
+trial 1,1580 nanoseconds.
+trial 2,2370 nanoseconds.
+trial 3,1580 nanoseconds.
+trial 4,1581 nanoseconds.
+trial 5,1580 nanoseconds.
+trial 6,1580 nanoseconds.
+trial 7,1580 nanoseconds.
+trial 8,1185 nanoseconds.
+trial 9,1581 nanoseconds.
+trial 10,1185 nanoseconds.
+Average,521 nanoseconds.
+
+------------------For a 8000x8000 array-----------------------
+
+Runtime for worst case:  (only shown the first 10 trials) 
+
+trial 1,392297 nanoseconds.
+trial 2,393086 nanoseconds.
+trial 3,311308 nanoseconds.
+trial 4,472493 nanoseconds.
+trial 5,427852 nanoseconds.
+trial 6,462222 nanoseconds.
+trial 7,301037 nanoseconds.
+trial 8,288790 nanoseconds.
+trial 9,261926 nanoseconds.
+trial 10,260345 nanoseconds.
+trial 11,269036 nanoseconds.
+trial 12,257580 nanoseconds.
+trial 13,256000 nanoseconds.
+trial 14,276544 nanoseconds.
+trial 15,260741 nanoseconds.
+Average,278119 nanoseconds.
+
+Runtime for best case:  (only shown the first 10 trials) 
+
+trial 1,2371 nanoseconds.
+trial 2,1975 nanoseconds.
+trial 3,1580 nanoseconds.
+trial 4,1580 nanoseconds.
+trial 5,1185 nanoseconds.
+trial 6,1580 nanoseconds.
+trial 7,1580 nanoseconds.
+trial 8,1580 nanoseconds.
+trial 9,1186 nanoseconds.
+trial 10,1185 nanoseconds.
+Average,545 nanoseconds.
+
+------------------For a 10000x10000 array-----------------------
+
+Runtime for worst case:  (only shown the first 10 trials) 
+
+trial 1,628148 nanoseconds.
+trial 2,560593 nanoseconds.
+trial 3,483555 nanoseconds.
+trial 4,465777 nanoseconds.
+trial 5,462222 nanoseconds.
+trial 6,471308 nanoseconds.
+trial 7,416395 nanoseconds.
+trial 8,540049 nanoseconds.
+trial 9,508444 nanoseconds.
+trial 10,484346 nanoseconds.
+trial 11,411654 nanoseconds.
+trial 12,381235 nanoseconds.
+trial 13,370568 nanoseconds.
+trial 14,405728 nanoseconds.
+trial 15,374518 nanoseconds.
+Average,377248 nanoseconds.
+
+Runtime for best case:  (only shown the first 10 trials) 
+
+trial 1,2371 nanoseconds.
+trial 2,1185 nanoseconds.
+trial 3,1185 nanoseconds.
+trial 4,1185 nanoseconds.
+trial 5,790 nanoseconds.
+trial 6,1185 nanoseconds.
+trial 7,1186 nanoseconds.
+trial 8,791 nanoseconds.
+trial 9,790 nanoseconds.
+trial 10,790 nanoseconds.
+Average,458 nanoseconds.
