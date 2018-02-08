@@ -12,6 +12,15 @@ Our matrix search algorithm should be able to find the target element in O(n) ru
 
 We know that O(1) is constant run time, which means that no matter the size of our input, the time it takes our code to search for the target should remain approximately the same. We also know that O(n) scales linearly with the amount of output. Theoretically, twice amoung of data will roughly takes about twice amount of time to execute. 
 
+For a given search execution, what factors could influence how long it takes? Memory, programs running at the background
+
+
 **Experiment with Methodology Explained**
 
-We began by creating a 2D array with size 1000, because we believe that a larger array will show clearer difference in run time as we expand the array. The array does **not** use randomly generated elements and it is use over and over again to maintain consistency. We did not implement randomness because in a randomly generated array, the elements can be repeated, so the worst case scenario might appear in the array somewhere else before the algorithm actually reach the bottom left corner. Instead, we numbered our array sequentially. For each of the fixed array we created, we execute the matrix search algorithm 1000 times to minimize the effect of outliers. After the 1000th passes of the 1000 x 1000 array, the average is calculated and the first 15 trials are printed to show sample performances for debugging purposes. We 
+We began by creating a 2D array with size 1000, because we believe that a larger array will show clearer difference in run time as we expand the array. The array does **not** use randomly generated elements and it is use over and over again to maintain consistency. We did not implement randomness because in a randomly generated array, the elements can be repeated, so the worst case scenario might appear in the array somewhere else before the algorithm actually reach the bottom left corner. Instead, we numbered our array sequentially, so the target in search is consistent for all compilations. For each of the fixed array we created, we execute the matrix search algorithm 2000 times (1000 times for the best case and 1000 times for the worst case) to minimize the effect of outliers. After all the passes are done for both cases, the average is calculated and the first 15 trials are printed to show sample performances for debugging purposes. This process is repeated for size 1000 array to size 10,000 array (size is incremented by 1000 each run)
+
+What gives you confidence that you are accurately timing your *search* function, and not extraneous tasks?
+
+**Results**
+
+**Conclusion**
