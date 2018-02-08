@@ -56,7 +56,7 @@ public class MatrixFinder {
     }
     
     public static void main(String[] args){
-	int arrs = 2;
+	int arrs = 1;
 	
 	//testing arrs starting at 2000x2000 and then increasing the length by 2000
 	while(arrs <= 10){
@@ -67,7 +67,7 @@ public class MatrixFinder {
 	    System.out.println("\n------------------For a " + arrs + "000x" + arrs + "000 array-----------------------");  //deleted for CSV
 	    //testing out runtime
 	    System.out.println("\nRuntime for worst case:  (only shown the first 10 trials) \n");
-	    while(trial <= 100){
+	    while(trial <= 1000){
 		long startTime = System.nanoTime();
 		search(bigtest, bigtest[bigtest.length-1][0]); //code being tested 
 		long estimatedTime = System.nanoTime() - startTime;
@@ -82,18 +82,18 @@ public class MatrixFinder {
 	    trial = 1;
 	    ave = 0;
 	    System.out.println("\nRuntime for best case:  (only shown the first 10 trials) \n");
-	    while(trial <= 100){
+	    while(trial <= 1000){
 		long startTime = System.nanoTime();
 		search(bigtest, bigtest[0][bigtest.length-1]); //code being tested 
 		long estimatedTime = System.nanoTime() - startTime;
-		if(trial <= 10){
+		if(trial <= 15){
 		    System.out.println("trial " + trial + "," + estimatedTime +" nanoseconds.");
 		}
 		trial++;
 		ave += estimatedTime;
 	    }
 	    System.out.println("Average,"+ (ave/100) + " nanoseconds.");
-	    arrs += 2;
+	    arrs += 1;
 	}	    				     	
     }//end of main	    
 }
