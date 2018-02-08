@@ -77,7 +77,7 @@ public class MatrixFinder {
 		trial++;
 		ave += estimatedTime;
 	    }
-	    System.out.println("Average,"+ (ave/100) + " nanoseconds.");
+	    System.out.println("Average,"+ (ave/1000) + " nanoseconds.");
 
 	    trial = 1;
 	    ave = 0;
@@ -92,7 +92,7 @@ public class MatrixFinder {
 		trial++;
 		ave += estimatedTime;
 	    }
-	    System.out.println("Average,"+ (ave/100) + " nanoseconds.");
+	    System.out.println("Average,"+ (ave/1000) + " nanoseconds.");
 	    arrs += 1;
 	}	    				     	
     }//end of main	    
