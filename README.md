@@ -21,6 +21,8 @@ We began by creating a 2D array with size 1000, because we believe that a larger
 
 We included the results from one run of the code in a Spreadsheet linked below. The first table lists (to be continued..)
 
+![image of graph](https://github.com/wli13/Cheesy_Potatoes/blob/master/graph.png)
+
 https://docs.google.com/spreadsheets/d/1ikRJ-QTuYK6c-fMnRVm_rDXvm-QsNf78tHjwnC8kOT0/edit?usp=sharing
 
 **Conclusion**
