@@ -112,7 +112,7 @@ public class MatrixFinder {
 
 	int arrs = 1;
 	
-	//testing arrs starting at 2000x2000 and then increasing the length by 2000
+	//testing arrs starting at 1000x1000 and then increasing the length by 1000
 	while(arrs <= 10){
 	    int[][] bigtest = new int[arrs*1000][arrs*1000];
 	    populate(bigtest);
