@@ -157,7 +157,7 @@ public class MatrixFinder {
 		ave += estimatedTime;
 	    }
 	    System.out.println("Average of 1000 trials: "+ (ave/1000) + " nanoseconds.");
-	    sb.append(ave/100);
+	    sb.append(ave/1000);
 	    sb.append('\n');
 	    arrs += 1;
 	}
