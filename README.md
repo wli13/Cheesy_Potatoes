@@ -22,6 +22,7 @@ We began by creating a 2D array with size 1000, because we believe that a larger
 For our runner class, 
 Wenting, please include the graph and the link to the excel sheet down below
 
+https://docs.google.com/spreadsheets/d/1ikRJ-QTuYK6c-fMnRVm_rDXvm-QsNf78tHjwnC8kOT0/edit?usp=sharing
 
 **Conclusion**
   * Points to talk about in the conclusion
