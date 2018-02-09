@@ -19,17 +19,20 @@ We began by creating a 2D array with size 1000, because we believe that a larger
 
 **Results**
 
-We included the results from one run of the code in a Spreadsheet linked below. The first table lists (to be continued..)
+We included the results from one run of the code in a Spreadsheet linked below. 
 
 ![image of graph](https://github.com/wli13/Cheesy_Potatoes/blob/master/graph.png)
+
+CSV File Data (this is only the data from one run, but usually after each run, the CSV file will be overwritten):
 
 https://docs.google.com/spreadsheets/d/1ikRJ-QTuYK6c-fMnRVm_rDXvm-QsNf78tHjwnC8kOT0/edit?usp=sharing
 
 **Conclusion**
-  * Points to talk about in the conclusion
-      *  For a newly opened process in terminal, the SYSTEM has to allocate memory to its tasks, and that might slow it down at first. As shown in the trials data, the first few trials are way larger than the average, it also makes the run time of 1000 x 1000 array bigger
-      *  Talk about the SOP here
-      *  Talk about how the best case scenario did not show constant run time at first and why we decided to put the two cases in one graph
-      * You can add more
+After the analyzing out data from multiple runs, we noticed that the average runtimes for both the best and worst cases for a 1000x1000 array tends to be longer than the 2000x2000 array. After that, the runtimes increase for the worst cases in a linear fashion. This is because when opening a new session in the terminal, the SYSTEM has to allocate memory to its tasks, and that might slow it down at first. As shown in the worst case trials' data, the first five trials are larger than the rest but then there's more of a linear correlation between size of the array and runtime. As shown in the CSV file in this README, the worst cases' average runtime starting from 2000x2000 shows linear correlation. The average runtime for the worst case of a 2000x2000 array is 14785 nanoseconds and for an array that is 4000x4000, the average runtime for the worst case relatively doubles, its time is 27533 nanoseconds. Also, when we calculate the correlation factor of the correlation factor is 0.96 (very strong). As for the best case scenario, the graph we generated at first did not show constant runtime, but we calculated the equation of the line of best fit, the slope of the equation is very close to zero, which means that the size of the array have little to no effect on the run time. Also, when we place the best case and the worst case run time in the same graph, the best case has a flat slope.
 
+We also tested how the System.out.print affects the run time of our algorithm. At first we thought that removing the System.out.print will increase efficiency of the algorithm, but the result turns out to be the exact opposite. For example, the run time without any SOP for a 1000 x 1000 array (worst case) is 64725 nanoseconds, but the run time with SOP for the array of a same size is 21298 nanoseconds.
+
+Other than the SOP issue, our results matches with our hypothesis!
+
+ 
 
