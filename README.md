@@ -19,8 +19,7 @@ We began by creating a 2D array with size 1000, because we believe that a larger
 
 **Results**
 
-For our runner class, 
-Wenting, please include the graph and the link to the excel sheet down below
+We included the results from one run of the code in a Spreadsheet linked below. The first table lists (to be continued..)
 
 https://docs.google.com/spreadsheets/d/1ikRJ-QTuYK6c-fMnRVm_rDXvm-QsNf78tHjwnC8kOT0/edit?usp=sharing
 
