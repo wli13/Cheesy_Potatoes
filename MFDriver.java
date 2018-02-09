@@ -3,58 +3,12 @@
 //L#00 -- But What Does the Data Say?
 //2018-02-07
 
-/*
- *Consider an n x n 2D array of ints, wherein numbers increase across any row (L->R) and down any column...
- *
- *e.g.,
- *
- *| 1  3  5 |
- *
- *| 3  7  8 |
- *
- *| 5 12 15 |
- *... Given a target number returns the coordinates of the first occurence of the 
- *    target number if found
- *    If not found, (-1, -1) is returned
- *
- *Algorithm: 
- *    1. Start with the top right corner
- *    2. Compare element with target
- *        a. if element == target, return coordinate
- *        b. if element < target, increase row by 1
- *        c  if element > target, decrease column by 1
- *    3. Repeat step 2 until coordinates are returned or element is out of bound
- *       in which case we return (-1, -1)
- */
+//Driver class
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
-public class MatrixFinder {
-    public static String search(int[][] matrix, int target){
-	int col = matrix.length - 1; //starting at upper right corner
-	int row = 0;
-	while(col >= 0 && row < matrix.length){  //as long as it's in the bounds of the matrix
-	    if (matrix[row][col] == target){  //once that target is found, if it's there
-		return "(" + row + "," + col + ")";
-	    }
-	    else if(matrix[row][col] < target){  //either it's less than target so go to greater #s
-		row++;
-	    }
-	    else{  //or less than target so go to lower #s
-		col--;
-	    }
-	}
-	return "(-1,-1)";  //if not found, return (-1,-1])
-    }
-
-    public static void populate(int[][] arr){ //populates array
-	int ctr = 1;
-	for (int x = 0; x < arr.length;x++){
-	    for (int y = 0;y < arr.length;y++){
-		arr[x][y] = ctr;
-		ctr += 1;
-	    }
-	}
-    }
-    /*  
+public class MFDriver{
     public static void main(String[] args){
         PrintWriter pw = null;
 	try {
@@ -65,7 +19,7 @@ public class MatrixFinder {
 
 	StringBuilder sb = new StringBuilder();
 	
-	//column label of csv files
+	//column label of csv files --  so we don't have to append different spreadsheet files later
 	sb.append("size ");
 	sb.append(", ");
 	sb.append("type ");
@@ -110,7 +64,7 @@ public class MatrixFinder {
 	//testing arrs starting at 1000x1000 and then increasing the length by 1000
 	while(arrs <= 10){
 	    int[][] bigtest = new int[arrs*1000][arrs*1000];
-	    populate(bigtest);
+	    MatrixFinder.populate(bigtest);
 	    int trial = 1;
 		int ave = 0;       
 		
@@ -123,7 +77,7 @@ public class MatrixFinder {
 
 	    while(trial <= 1000){
 		long startTime = System.nanoTime();
-		search(bigtest, bigtest[bigtest.length-1][0]); //code being tested 
+		MatrixFinder.search(bigtest, bigtest[bigtest.length-1][0]); //code being tested 
 		long estimatedTime = System.nanoTime() - startTime;
 		if(trial <= 15){
 		    System.out.println("trial " + trial + ", " + estimatedTime + " nanoseconds.");
@@ -146,7 +100,7 @@ public class MatrixFinder {
 	    
 	    while(trial <= 1000){
 		long startTime = System.nanoTime();
-		search(bigtest, bigtest[0][bigtest.length-1]); //code being tested 
+		MatrixFinder.search(bigtest, bigtest[0][bigtest.length-1]); //code being tested 
 		long estimatedTime = System.nanoTime() - startTime;
 		if(trial <= 15){
 		    System.out.println("trial " + trial + ", " + estimatedTime +" nanoseconds.");
@@ -163,7 +117,6 @@ public class MatrixFinder {
 	}
 	pw.write(sb.toString());
 	pw.close();
-	}//end of main  */	    
+    }//end of main
+
 }
-
-
